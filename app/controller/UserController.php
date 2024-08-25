@@ -26,6 +26,13 @@
 
       $this->_usercontract->register($newUser);
     }
+
+    public function login(
+      $email,
+      $password
+    ) {
+      return $this->_usercontract->login($email, $password);
+    }
   }
 
 ?>
