@@ -1,5 +1,7 @@
 <?php
 
+  namespace IvanPackage\database;
+
   class Base {
     const HOST = "localhost";
     const DB_USERNAME = "root";

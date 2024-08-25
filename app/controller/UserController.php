@@ -1,7 +1,10 @@
 <?php
 
-  require_once __DIR__ . "/../repository/UserRepository.php";
-  require_once __DIR__ . "/../model/User.php";
+  namespace IvanPackage\controller;
+
+  use IvanPackage\contract\UserContract;
+  use IvanPackage\model\User;
+  use IvanPackage\repository\UserRepository;
 
   class UserController {
     private readonly UserContract $_usercontract;

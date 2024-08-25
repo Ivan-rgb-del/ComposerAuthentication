@@ -1,8 +1,11 @@
 <?php
 
-  require_once __DIR__ . "/../database/base.php";
-  require_once __DIR__ . "/../contract/UserContract.php";
-  require_once __DIR__ . "/../model/User.php";
+  namespace IvanPackage\repository;
+
+  use IvanPackage\database\Base;
+  use IvanPackage\contract\UserContract;
+  use IvanPackage\model\User;
+  use Exception;
 
   class UserRepository extends Base implements UserContract {
     public function register(User $user)
