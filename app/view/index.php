@@ -15,18 +15,18 @@
             <h3>Register</h3>
           </div>
           <div class="card-body">
-            <form>
+            <form action="../handlers/proccesRegisterUser.php" method="POST">
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username">
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
               </div>
               <button type="submit" class="btn btn-primary w-100">Register</button>
             </form>

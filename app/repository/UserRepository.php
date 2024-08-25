@@ -2,6 +2,7 @@
 
   require_once __DIR__ . "/../database/base.php";
   require_once __DIR__ . "/../contract/UserContract.php";
+  require_once __DIR__ . "/../model/User.php";
 
   class UserRepository extends Base implements UserContract {
     public function register(User $user)
