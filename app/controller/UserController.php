@@ -22,7 +22,7 @@
 
       $newUser->username = $username;
       $newUser->email = $email;
-      $newUser->password = $password;
+      $newUser->password = password_hash($password, PASSWORD_BCRYPT);
 
       $this->_usercontract->register($newUser);
     }

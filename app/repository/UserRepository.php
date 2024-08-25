@@ -33,8 +33,8 @@
       $email = $this->conn->real_escape_string($email);
       $password = $this->conn->real_escape_string($password);
 
-      $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
-      $stmt->bind_param("ss", $email, $password);
+      $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = ?");
+      $stmt->bind_param("s", $email);
       $stmt->execute();
       $result = $stmt->get_result();
 
@@ -43,6 +43,10 @@
       }
 
       $user = $result->fetch_assoc();
+      if (!password_verify($password, $user['password'])) {
+        die("Invalid password");
+      }
+
       return $user;
     }
   }
